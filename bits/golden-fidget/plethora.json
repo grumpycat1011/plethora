@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "runtime": "plethora-bit@2",
+  "entry": "main.js",
+  "title": "Golden Fidget",
+  "description": "Three mindless math fidgets: twist a golden-angle sunflower, morph a times-table circle, and grow the Fibonacci spiral — with haptic clicks at every Fibonacci detent.",
+  "tags": [
+    "fidget",
+    "math",
+    "fibonacci",
+    "golden-ratio",
+    "generative",
+    "haptics"
+  ],
+  "permissions": [
+    "haptics"
+  ],
+  "dependencies": [],
+  "tuning": {
+    "schemaVersion": 1,
+    "groups": {
+      "feel": { "label": "Feel" },
+      "visual": { "label": "Visual" }
+    },
+    "knobs": {
+      "haptics_on": {
+        "label": "Haptic detents",
+        "type": "boolean",
+        "default": true,
+        "group": "feel",
+        "intent": "feel",
+        "apply": "live"
+      },
+      "auto_drift": {
+        "label": "Times table drifts when idle",
+        "type": "boolean",
+        "default": true,
+        "group": "feel",
+        "intent": "feel",
+        "apply": "live"
+      },
+      "seed_count": {
+        "label": "Sunflower seeds",
+        "type": "integer",
+        "default": 800,
+        "min": 200,
+        "max": 1400,
+        "step": 50,
+        "group": "visual",
+        "intent": "visual",
+        "apply": "live"
+      },
+      "table_points": {
+        "label": "Times table points",
+        "type": "integer",
+        "default": 240,
+        "min": 60,
+        "max": 400,
+        "step": 10,
+        "group": "visual",
+        "intent": "visual",
+        "apply": "live"
+      }
+    }
+  },
+  "onboarding": {
+    "kind": "one_line",
+    "version": 1,
+    "message": "Drag to twist the math, tap to bloom. Switch toys up top."
+  }
+}
