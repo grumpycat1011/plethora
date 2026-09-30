@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "runtime": "plethora-bit@2",
+  "entry": "main.js",
+  "title": "Ricochet",
+  "description": "Bank neon bullets off walls to hit every target across 10 intricate maps. Red mirrors, blue phases through glass, green turns 90°, yellow splits.",
+  "tags": ["puzzle", "shooter", "ricochet", "physics", "neon", "haptics"],
+  "permissions": ["haptics", "storage"],
+  "dependencies": [],
+  "tuning": {
+    "schemaVersion": 1,
+    "groups": {
+      "feel": { "label": "Feel" },
+      "difficulty": { "label": "Difficulty" }
+    },
+    "knobs": {
+      "bullet_speed": {
+        "label": "Bullet speed",
+        "type": "number",
+        "default": 190,
+        "min": 100,
+        "max": 360,
+        "step": 10,
+        "group": "feel",
+        "intent": "feel",
+        "apply": "live"
+      },
+      "preview_after_bounce": {
+        "label": "Aim guide length after first bounce",
+        "type": "number",
+        "default": 24,
+        "min": 0,
+        "max": 80,
+        "step": 2,
+        "group": "difficulty",
+        "intent": "difficulty",
+        "apply": "live"
+      },
+      "haptics_on": {
+        "label": "Haptics",
+        "type": "boolean",
+        "default": true,
+        "group": "feel",
+        "intent": "feel",
+        "apply": "live"
+      }
+    }
+  },
+  "onboarding": {
+    "kind": "one_line",
+    "version": 1,
+    "message": "Drag to aim, release to fire. Hit every target."
+  }
+}
