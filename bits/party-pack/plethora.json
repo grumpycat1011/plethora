@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "runtime": "plethora-bit@2",
+  "entry": "main.js",
+  "title": "Party Pack",
+  "description": "Nine party drinking games for 2-10 players that explain the rules and run each round for you: King's Cup, Never Have I Ever, Most Likely To, Truth or Drink, Higher or Lower, Buzz, Categories, Hot Potato Bomb and a Drink Wheel. Sober points mode and water breaks included. Adults of legal drinking age only.",
+  "tags": ["party", "drinking-game", "multiplayer", "pass-and-play", "cards", "social"],
+  "permissions": ["haptics", "storage"],
+  "dependencies": [],
+  "tuning": {
+    "schemaVersion": 1,
+    "groups": {
+      "pacing": { "label": "Pacing" },
+      "feel": { "label": "Feel" }
+    },
+    "knobs": {
+      "water_every": {
+        "label": "Water break every N drinks (0 = off)",
+        "type": "integer",
+        "default": 20,
+        "min": 0,
+        "max": 60,
+        "step": 5,
+        "group": "pacing",
+        "intent": "gameplay",
+        "apply": "live"
+      },
+      "cat_seconds": {
+        "label": "Categories seconds per turn",
+        "type": "integer",
+        "default": 5,
+        "min": 3,
+        "max": 15,
+        "step": 1,
+        "group": "pacing",
+        "intent": "difficulty",
+        "apply": "live"
+      },
+      "haptics_on": {
+        "label": "Haptics",
+        "type": "boolean",
+        "default": true,
+        "group": "feel",
+        "intent": "feel",
+        "apply": "live"
+      }
+    }
+  },
+  "onboarding": {
+    "kind": "one_line",
+    "version": 1,
+    "message": "Add your players, pick a game, and pass the phone."
+  }
+}
